@@ -36,12 +36,12 @@
 		};
 		var runAnimation = function(pngArray) {
 			requestTimeout(function() {
-				animationNum++;
-				if(animationNum >= settings.slides) {
+				if(animationNum >= (settings.slides - 1)) {
 					return false;
 				} else {
 					animationNum++;
 				}
+				console.log(pngArray[animationNum].src);
 				$('.anim-seq img').attr('src', pngArray[animationNum].src);
 				runAnimation(pngArray);
 			}, settings.speed);
