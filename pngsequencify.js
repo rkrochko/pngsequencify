@@ -41,7 +41,6 @@
 				} else {
 					animationNum++;
 				}
-				console.log(pngArray[animationNum].src);
 				$('.anim-seq img').attr('src', pngArray[animationNum].src);
 				runAnimation(pngArray);
 			}, settings.speed);
